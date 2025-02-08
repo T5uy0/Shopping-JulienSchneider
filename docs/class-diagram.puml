@@ -9,7 +9,7 @@ class CartItem {
     - articleId:int
     - name:string
     - quantity:int
-    - price:Int
+    - price :float
 
     + <<constructor>> CartItem(articleId:int, name:string, quantity:int, price:Int)
     +<get>articleId() Int
