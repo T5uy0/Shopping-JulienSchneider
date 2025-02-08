@@ -4,11 +4,21 @@ left to right direction
 skinparam classAttributeIconSize 0
 
 'Classes declaration
-class Cart{
-   +Cart(articleId: int, name: string, quantity: int, price: float)
-   +<get,set>quantity():int
-   +<get>name():string
-   +<get>price():float
+class CartItem {
+
+    - articleId:int
+    - name:string
+    - quantity:int
+    - price :float
+
+    + <<constructor>> CartItem(articleId:int, name:string, quantity:int, price:Int)
+    +<get>articleId() Int
+    +<get>name() String
+    +<get>quantity() Int
+    +<set>quantity() Int
+    +<get>price() Int
+    +<set>price() Int
+    +<get>total() Int
 }
 
 class Error{}
@@ -17,12 +27,10 @@ class InvalidArticleIdException{}
 class InvalidQuantityException{}
 class InvalidPriceException{}
 
-'Relations
-Cart --> InvalidArticleIdException
-Cart --> InvalidQuantityException : throws
-Cart --> InvalidPriceException : throws
+CartItem --> InvalidArticleIdException
+CartItem --> InvalidQuantityException : throws
+CartItem --> InvalidPriceException : throws
 
-'Exception inheritance
 InvalidArticleIdException -|> CartItemException
 InvalidPriceException -|> CartItemException
 InvalidQuantityException -|> CartItemException
