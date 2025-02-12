@@ -28,6 +28,13 @@ module.exports = class Cart {
         return this.#items;
     }
 
+    get total() {
+        // Calculates the total price of all items in the cart by iterating over the `items` array
+        // and summing up the product of `price` and `quantity` for each `CartItem`.
+        // The initial value of `total` is set to 0 to ensure proper accumulation.
+        return this.#items.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
     //endregion public methods
 
     //region private methods
