@@ -9,7 +9,7 @@ class CartItem {
     - articleId:int
     - name:string
     - quantity:int
-    - price :float
+    - price:float
 
     + <<constructor>> CartItem(articleId:int, name:string, quantity:int, price:Int)
     +<get>articleId() Int
@@ -24,6 +24,9 @@ class CartItem {
 class Cart {
     - items:CartItem[]
     + <<constructor>> Cart(items:CartItem[])
+    + total() Int
+    + count(item:bool) Int
+    + add(items:CartItem[]) Void
 }
 
 class Error{}
