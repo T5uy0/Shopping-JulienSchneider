@@ -18,7 +18,14 @@ module.exports = class Cart {
 
     //region public methods
     constructor(items = []) {
-        this.items = items;
+        this.#items = items;
+    }
+
+    get items() {
+        if (!Array.isArray(this.#items)) {
+            throw new EmptyCartException;
+        }
+        return this.#items;
     }
 
     //endregion public methods
