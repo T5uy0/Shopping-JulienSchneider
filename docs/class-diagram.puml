@@ -24,6 +24,7 @@ class CartItem {
 class Cart {
     - items:CartItem[]
     + <<constructor>> Cart(items:CartItem[])
+    +<get>items() items:CartItem[]
     + total() Int
     + count(item:bool) Int
     + add(items:CartItem[]) Void
