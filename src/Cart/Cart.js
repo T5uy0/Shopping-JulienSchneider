@@ -45,6 +45,12 @@ module.exports = class Cart {
         return this.#items.length;
     }
 
+    add (items) {
+        if (!Array.isArray(items)) {
+            throw new UpdateCartException;
+        }
+    }
+
     //endregion public methods
 
     //region private methods
