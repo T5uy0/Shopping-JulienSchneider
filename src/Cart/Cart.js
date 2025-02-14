@@ -38,6 +38,13 @@ module.exports = class Cart {
         return this.#items.reduce((total, item) => total + item.price * item.quantity, 0);
     }
 
+    get count() {
+        if (!Array.isArray(this.#items)) {
+            throw new EmptyCartException;
+        }
+        return this.#items.length;
+    }
+
     //endregion public methods
 
     //region private methods
