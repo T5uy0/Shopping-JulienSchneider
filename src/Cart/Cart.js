@@ -38,17 +38,25 @@ module.exports = class Cart {
         return this.#items.reduce((total, item) => total + item.price * item.quantity, 0);
     }
 
-    get count() {
+    count(value) {
+
         if (!Array.isArray(this.#items)) {
             throw new EmptyCartException;
         }
-        return this.#items.length;
+
+        if (value) {
+            return this.#items.length;
+        } else {
+            return this.#items.reduce((total, item) => total + item.quantity, 0);
+        }
+
     }
 
-    add (items) {
+    add(items) {
         if (!Array.isArray(items)) {
             throw new UpdateCartException;
         }
+        this.#items = items;
     }
 
     //endregion public methods
