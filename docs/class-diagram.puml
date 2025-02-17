@@ -26,7 +26,7 @@ class Cart {
     + <<constructor>> Cart(items:CartItem[])
     +<get>items() items:CartItem[]
     + total() Int
-    + count(item:bool) Int
+    + count(value : int) int
     + add(items:CartItem[]) Void
 }
 
@@ -42,23 +42,24 @@ class CartException{}
 class EmptyCartException{}
 class UpdateCartException{}
 
-CartItem --o Cart
+
+'CartItem
+
+CartItem --> InvalidArticleIdException: throws
+CartItem --> InvalidQuantityException : throws
+CartItem --> InvalidPriceException : throws
+
+Cart o-- CartItem
 Cart --> EmptyCartException : throws
 Cart --> UpdateCartException : throws
 CartException -|> Error
 EmptyCartException -|> CartException
 UpdateCartException -|> CartException
 
-'CartItem
-CartItem --> InvalidArticleIdException
-CartItem --> InvalidQuantityException : throws
-CartItem --> InvalidPriceException : throws
 
-InvalidArticleIdException -|> CartItemException
+Error <|- CartItemException
 InvalidPriceException -|> CartItemException
 InvalidQuantityException -|> CartItemException
-CartItemException -|> Error
-
-
+CartItemException <|- InvalidArticleIdException
 
 @enduml
