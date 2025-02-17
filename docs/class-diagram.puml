@@ -9,7 +9,7 @@ class CartItem {
     - articleId:int
     - name:string
     - quantity:int
-    - price:float
+    - price:Int
 
     + <<constructor>> CartItem(articleId:int, name:string, quantity:int, price:Int)
     +<get>articleId() Int
@@ -22,7 +22,7 @@ class CartItem {
 }
 
 class Cart {
-    - items:CartItem[]
+    - items:CartItem[] = null
     + <<constructor>> Cart(items:CartItem[])
     +<get>items() items:CartItem[]
     + total() Int
@@ -31,6 +31,7 @@ class Cart {
 }
 
 class Error{}
+
 'CartItem
 class CartItemException{}
 class InvalidArticleIdException{}
@@ -42,9 +43,7 @@ class CartException{}
 class EmptyCartException{}
 class UpdateCartException{}
 
-
 'CartItem
-
 CartItem --> InvalidArticleIdException: throws
 CartItem --> InvalidQuantityException : throws
 CartItem --> InvalidPriceException : throws
