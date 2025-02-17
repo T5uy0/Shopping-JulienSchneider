@@ -6,8 +6,8 @@ const UpdateCartException = require("../src/Cart/UpdateCartException.js");
 
 test('items_NominalCase_GetItems', () => {
     //given
-    let cartItem1 = new CartItem(1,"Iphone 27", 1,10);
-    let cartItem2= new CartItem(2,"Iphone 28",2,20);
+    let cartItem1 = new CartItem(1, "Iphone 27", 1, 10);
+    let cartItem2 = new CartItem(2, "Iphone 28", 2, 20);
     let expectedItems = [cartItem1, cartItem2];
     let cart = new Cart(expectedItems);
 
@@ -15,8 +15,7 @@ test('items_NominalCase_GetItems', () => {
     let actualItems = cart.items;
 
     //then
-    for (let i = 0 ; i <= expectedItems.length ; i++)
-    {
+    for (let i = 0; i <= expectedItems.length; i++) {
         expect(actualItems[i]).toEqual(expectedItems[i]);
     }
 })
@@ -34,8 +33,8 @@ test('items_EmptyCart_ThrowException', () => {
 
 test('total_NominalCase_GetsSum', () => {
     //given
-    let cartItem1 = new CartItem(1,"Iphone 27",1,10);
-    let cartItem2= new CartItem(2,"Iphone 28",2,20);
+    let cartItem1 = new CartItem(1, "Iphone 27", 1, 10);
+    let cartItem2 = new CartItem(2, "Iphone 28", 2, 20);
     let items = [cartItem1, cartItem2];
     let cart = new Cart(items);
     let totalPriceExpected = 50;
@@ -60,8 +59,8 @@ test('total_EmptyCart_ThrowException', () => {
 
 test('count_OnlySingleQuantityProduct_GetsNumberOfItems', () => {
     //given
-    let cartItem1 = new CartItem(1,"Iphone 27",1,10);
-    let cartItem2= new CartItem(2,"Iphone 28", 1,20);
+    let cartItem1 = new CartItem(1, "Iphone 27", 1, 10);
+    let cartItem2 = new CartItem(2, "Iphone 28", 1, 20);
     let items = [cartItem1, cartItem2];
     let cart = new Cart(items);
     let countExpected = 2;
@@ -75,8 +74,8 @@ test('count_OnlySingleQuantityProduct_GetsNumberOfItems', () => {
 
 test('count_MixSingleAndMultipleQuantityProduct_GetsNumberOfItems', () => {
     //given
-    let cartItem1 = new CartItem(1,"Iphone 27",1,10);
-    let cartItem2= new CartItem(2,"Iphone 28", 2,20);
+    let cartItem1 = new CartItem(1, "Iphone 27", 1, 10);
+    let cartItem2 = new CartItem(2, "Iphone 28", 2, 20);
     let items = [cartItem1, cartItem2];
     let cart = new Cart(items);
     let countExpected = 3;
@@ -90,8 +89,8 @@ test('count_MixSingleAndMultipleQuantityProduct_GetsNumberOfItems', () => {
 
 test('count_MixSingleAndMultipleQuantityProductDistinct_GetsNumberOfItems', () => {
     //given
-    let cartItem1 = new CartItem(1,"Iphone 27",1,10);
-    let cartItem2= new CartItem(2,"Iphone 28", 2,20);
+    let cartItem1 = new CartItem(1, "Iphone 27", 1, 10);
+    let cartItem2 = new CartItem(2, "Iphone 28", 2, 20);
     let items = [cartItem1, cartItem2];
     let cart = new Cart(items);
     let countExpected = 2;
@@ -118,10 +117,10 @@ test('add_EmptyCartAddFirstSingleCartItem_GetsUpdatedNumberOfItems', () => {
     //given
     let cart = new Cart(null);
     let expectedTotalPrice = 10;
-    let cartItem1 = new CartItem(1,"Iphone 27",1,expectedTotalPrice);
+    let cartItem1 = new CartItem(1, "Iphone 27", 1, expectedTotalPrice);
     let items = [cartItem1];
 
-    //when
+    //
     cart.add(items);
 
     //then
