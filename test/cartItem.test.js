@@ -1,6 +1,6 @@
 "use strict";
 
-let CartItem =  require('../src/CartItem/CartItem.js');
+let CartItem = require('../src/CartItem/CartItem.js');
 const InvalidArticleIdException = require("../src/CartItem/InvalidArticleIdException.js");
 const InvalidQuantityException = require("../src/CartItem/InvalidQuantityException.js");
 const InvalidPriceException = require("../src/CartItem/InvalidPriceException.js");
@@ -107,7 +107,7 @@ test('price_setPriceNominalCase_PriceValueCorrectlySet', () => {
     let name = "Iphone 27";
     let quantity = 10;
     let price = 20;
-    let cartItem = new CartItem(articleId, name,quantity, price);
+    let cartItem = new CartItem(articleId, name, quantity, price);
     let expectedPrice = 22;
     let expectedTotal = 220;
 

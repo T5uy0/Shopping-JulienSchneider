@@ -1,2 +1,2 @@
-module.exports = class CartException extends Error{
+module.exports = class CartException extends Error {
 }
