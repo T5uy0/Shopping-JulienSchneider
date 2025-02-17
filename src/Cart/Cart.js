@@ -3,6 +3,7 @@
  * @brief     Class of Cart.
  * @author    Created by Julien.Schneider
  * @version   12-02-2025
+ * @last-update   17-02-2025
  */
 "use strict";
 const EmptyCartException = require("./EmptyCartException.js");
@@ -13,7 +14,6 @@ module.exports = class Cart {
 
     //region private attributes
     #items
-
     //endregion private attributes
 
     //region public methods
@@ -49,7 +49,6 @@ module.exports = class Cart {
         } else {
             return this.#items.reduce((total, item) => total + item.quantity, 0);
         }
-
     }
 
     add(items) {
@@ -58,7 +57,6 @@ module.exports = class Cart {
         }
         this.#items = items;
     }
-
     //endregion public methods
 
     //region private methods
