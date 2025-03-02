@@ -177,7 +177,7 @@ test('priceAverage_EmptyCartEmptyItemsToAdd_ThrowException', () => {
     let cart = new Cart(null);
 
     //when
-    expect(() => cart.priceAverage()).toThrow(UpdateCartException);
+    expect(() => cart.priceAverage()).toThrow(EmptyCartException);
 
     //then
     //Exception is thrown
