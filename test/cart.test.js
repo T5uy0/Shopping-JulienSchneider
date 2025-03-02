@@ -171,3 +171,14 @@ test('priceAverage_NominalCase_GetsAvg', () => {
     //then
     expect(priceAverage).toEqual(15);
 });
+
+test('priceAverage_EmptyCartEmptyItemsToAdd_ThrowException', () => {
+    //given
+    let cart = new Cart(null);
+
+    //when
+    expect(() => cart.priceAverage()).toThrow(UpdateCartException);
+
+    //then
+    //Exception is thrown
+})
