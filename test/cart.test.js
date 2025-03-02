@@ -158,3 +158,20 @@ test('add_EmptyCartEmptyItemsToAdd_ThrowException', () => {
     //then
     //Exception is thrown
 })
+
+test('priceAverage_NominalCase_GetsAvg', () => {
+    //given
+    let cartItem1 = new CartItem(1, "Iphone 16", 1, 20);
+    let cartItem2 = new CartItem(2, "Ipad 4", 2, 10);
+    let expectedItems = [cartItem1, cartItem2];
+    let cart = new Cart(expectedItems);
+
+    jest.spyOn(cartItem1, 'total', 'get').mockReturnValue(20);
+    jest.spyOn(cartItem2, 'total', 'get').mockReturnValue(10);
+
+    //when
+    let priceAverage = cart.priceAverage;
+
+    //then
+    expect(priceAverage).toBe(15);
+});
