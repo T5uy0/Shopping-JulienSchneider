@@ -18,16 +18,17 @@ class CartItem {
     +<set>quantity() Int
     +<get>price() Int
     +<set>price() Int
-    +<get>total() Int
+    +<get>total() float
 }
 
 class Cart {
     - items:CartItem[] = null
     + <<constructor>> Cart(items:CartItem[])
     +<get>items() items:CartItem[]
-    + total() Int
+    + total() float
     + count(value : int) int
     + add(items:CartItem[]) Void
+    + priceAverage() float
 }
 
 class Error{}
