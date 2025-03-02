@@ -158,3 +158,27 @@ test('add_EmptyCartEmptyItemsToAdd_ThrowException', () => {
     //then
     //Exception is thrown
 })
+
+test('priceAverage_NominalCase_GetsAvg', () => {
+    //given
+    let cartItem1 = new CartItem(1, "Iphone 16", 1, 20);
+    let cartItem2 = new CartItem(2, "Ipad 4", 1, 10);
+    let expectedItems = [cartItem1, cartItem2];
+    let cart = new Cart(expectedItems);
+
+    //when
+    let priceAverage = cart.priceAverage();
+    //then
+    expect(priceAverage).toEqual(15);
+});
+
+test('priceAverage_EmptyCartEmptyItemsToAdd_ThrowException', () => {
+    //given
+    let cart = new Cart(null);
+
+    //when
+    expect(() => cart.priceAverage()).toThrow(EmptyCartException);
+
+    //then
+    //Exception is thrown
+})

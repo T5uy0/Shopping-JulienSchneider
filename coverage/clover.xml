@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1740926870246" clover="3.2.0">
+  <project timestamp="1740926870246" name="All files">
+    <metrics statements="54" coveredstatements="54" conditionals="21" coveredconditionals="20" methods="17" coveredmethods="17" elements="92" coveredelements="91" complexity="0" loc="54" ncloc="54" packages="2" files="9" classes="9"/>
+    <package name="Cart">
+      <metrics statements="26" coveredstatements="26" conditionals="11" coveredconditionals="10" methods="10" coveredmethods="10"/>
+      <file name="Cart.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/Cart/Cart.js">
+        <metrics statements="21" coveredstatements="21" conditionals="11" coveredconditionals="10" methods="10" coveredmethods="10"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="21" count="12" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="35" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="43" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="55" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+      </file>
+      <file name="CartException.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/Cart/CartException.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="EmptyCartException.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/Cart/EmptyCartException.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="UpdateCartException.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/Cart/UpdateCartException.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="CartItem">
+      <metrics statements="28" coveredstatements="28" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
+      <file name="CartItem.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/CartItem/CartItem.js">
+        <metrics statements="21" coveredstatements="21" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="24" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="53" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+      </file>
+      <file name="CartItemException.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/CartItem/CartItemException.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="InvalidArticleIdException.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/CartItem/InvalidArticleIdException.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="InvalidPriceException.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/CartItem/InvalidPriceException.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="InvalidQuantityException.js" path="/Users/julienschneider/Desktop/projet-cpnv/Shopping-JulienSchneider/src/CartItem/InvalidQuantityException.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

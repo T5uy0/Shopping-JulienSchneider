@@ -57,6 +57,19 @@ module.exports = class Cart {
         }
         this.#items = items;
     }
+
+    priceAverage() {
+
+        if (!Array.isArray(this.#items)) {
+            throw new EmptyCartException;
+        }
+
+        const totalValue = this.#items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const totalQuantity = this.#items.reduce((sum, item) => sum + item.quantity, 0);
+
+        return totalValue / totalQuantity;
+    }
+
     //endregion public methods
 
     //region private methods
